@@ -1,4 +1,5 @@
 const fs = require("node:fs/promises")
+const PORT = process.env.PORT || 8000;
 
 let date1=new Date()
 
@@ -37,3 +38,5 @@ createFile();
 }
 
 readDirectory();
+
+fs.listen(PORT, () => { console.log(`listening on port ${PORT}`) })
